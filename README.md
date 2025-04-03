@@ -34,12 +34,6 @@ Snake-Game/
 └── README.md          # Este arquivo
 ```
 
-## 📸 Screenshots
-<div align="center">
-  <img src="img/screenshots/menu.png" width="45%" alt="Menu do Jogo">
-  <img src="img/screenshots/gameplay.png" width="45%" alt="Gameplay">
-</div>
-
 ## 🤝 Como Contribuir
 1. Faça um fork do projeto
 2. Crie sua branch (`git checkout -b feature/nova-feature`)
