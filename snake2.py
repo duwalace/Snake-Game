@@ -25,13 +25,13 @@ except:
     button_font = pygame.font.SysFont('Arial', 36, bold=True)
 
 try:
-    laugh_sound = pygame.mixer.Sound("PeterGriffinLaugh.mp3")
+    laugh_sound = pygame.mixer.Sound("./sons/PeterGriffinLaugh.mp3")
     laugh_sound.set_volume(1.0)
-    button_sound = pygame.mixer.Sound("Botao.mp3")
+    button_sound = pygame.mixer.Sound("./sons/Botao.mp3")
     button_sound.set_volume(1.0)
-    gameover_sound = pygame.mixer.Sound("GameOver.mp3")
+    gameover_sound = pygame.mixer.Sound("./sons/GameOver.mp3")
     gameover_sound.set_volume(1.0)
-    brian_eat_sound = pygame.mixer.Sound("BrianBark.mp3")
+    brian_eat_sound = pygame.mixer.Sound("./sons/BrianBark.mp3")
     brian_eat_sound.set_volume(1.0)
 except:
     laugh_sound = None
@@ -44,19 +44,19 @@ GRID_WIDTH = WIDTH // GRID_SIZE
 GRID_HEIGHT = HEIGHT // GRID_SIZE
 
 try:
-    head_img = pygame.image.load("snake_head.png")
-    body_img = pygame.image.load("snake_body.png")
-    tail_img = pygame.image.load("snake_tail.png")
-    brian_head_img = pygame.image.load("brian_head.png")
-    brian_body_img = pygame.image.load("brian_body.png")
-    brian_tail_img = pygame.image.load("brian_tail.png")
-    apple_img = pygame.image.load("apple.png")
-    pizza_img = pygame.image.load("pizza.png")
-    beer_img = pygame.image.load("beer.png")
-    game_over_img = pygame.image.load("GameOver.png")
-    peter_gameover_img = pygame.image.load("petergameover.png")
-    brian_gameover_img = pygame.image.load("maxresdefault.png")
-    menu_background = pygame.image.load("fundomenu.jpeg")
+    head_img = pygame.image.load("./img/snake_head.png")
+    body_img = pygame.image.load("./img/snake_body.png")
+    tail_img = pygame.image.load("./img/snake_tail.png")
+    brian_head_img = pygame.image.load("./img/brian_head.png")
+    brian_body_img = pygame.image.load("./img/brian_body.png")
+    brian_tail_img = pygame.image.load("./img/brian_tail.png")
+    apple_img = pygame.image.load("./img/apple.png")
+    pizza_img = pygame.image.load("./img/pizza.png")
+    beer_img = pygame.image.load("./img/beer.png")
+    game_over_img = pygame.image.load("./img/GameOver.png")
+    peter_gameover_img = pygame.image.load("./img/petergameover.png")
+    brian_gameover_img = pygame.image.load("./img/maxresdefault.png")
+    menu_background = pygame.image.load("./img/fundomenu.jpeg")
     menu_background = pygame.transform.scale(menu_background, (WIDTH, HEIGHT))
 except Exception as e:
     print(f"Erro ao carregar imagens: {e}")
@@ -102,7 +102,7 @@ food_images = {
 }
 
 try:
-    menu_background = pygame.image.load("fundomenu.jpeg")
+    menu_background = pygame.image.load("./img/fundomenu.jpeg")
     menu_background = pygame.transform.scale(menu_background, (WIDTH, HEIGHT))
 except Exception as e:
     menu_background = None
@@ -290,13 +290,13 @@ def draw_walls():
         pygame.draw.rect(screen, BLACK, (wall[0] * GRID_SIZE, wall[1] * GRID_SIZE, GRID_SIZE, GRID_SIZE))
 
 try:
-    menu_background = pygame.image.load("fundomenu.jpeg")
+    menu_background = pygame.image.load("./img/fundomenu.jpeg")
     menu_background = pygame.transform.scale(menu_background, (WIDTH, HEIGHT))
 except Exception as e:
     menu_background = None
 
 try:
-    titulo_img = pygame.image.load("Titulo.png")
+    titulo_img = pygame.image.load("./img/Titulo.png")
     original_width, original_height = titulo_img.get_size()
     new_height = 700
     new_width = int((new_height / original_height) * original_width)
@@ -434,7 +434,7 @@ def main():
                         reset_game()
                         
                         try:
-                            pygame.mixer.music.load('music.mp3')
+                            pygame.mixer.music.load('./sons/music.mp3')
                             pygame.mixer.music.set_volume(0.2)
                             pygame.mixer.music.play(-1)
                             music_playing = True
@@ -447,7 +447,7 @@ def main():
                         reset_game()
                         
                         try:
-                            pygame.mixer.music.load('music.mp3')
+                            pygame.mixer.music.load('./sons/music.mp3')
                             pygame.mixer.music.set_volume(0.2)
                             pygame.mixer.music.play(-1)
                             music_playing = True
